@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/dwieeb/parallelizing-jest#readme",
   "devDependencies": {
-    "jest": "^26.4.1"
+    "jest": "^26.4.1",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "lodash": "^4.17.20"
