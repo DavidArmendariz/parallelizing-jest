@@ -31,4 +31,4 @@ jobs:
       - name: jest
         run: echo $CHUNKS | jq '.[${{ matrix.chunk }}] | .[] | @text' | xargs npx jest
         env:
-          CHUNKS: ${{ needs.setup.outputs.TEST_CHUNKS }}
+          CHUNKS: ${{ needs.setup.outputs.test-chunks }}
