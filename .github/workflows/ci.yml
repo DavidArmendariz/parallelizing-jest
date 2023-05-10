@@ -14,7 +14,7 @@ jobs:
         run: echo "TEST_CHUNKS=$(npx jest --listTests --json | jq -cM '[_nwise(length / 2 | floor)]')" >> "$GITHUB_OUTPUT"
       - id: setTestChunksIds
         name: Set Chunk IDs
-        run: echo "TEST_CHUNK_IDS=$(echo $CHUNKS | jq -cM 'to_entries | map(.key)')"
+        run: echo "TEST_CHUNK_IDS=$(echo $CHUNKS | jq -cM 'to_entries | map(.key)')" >> "$GITHUB_OUTPUT"
         env:
           CHUNKS: ${{ steps.setTestChunks.outputs.TEST_CHUNKS }}
   test:
